@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 4 Atividade 2</title>
+    <script>
+        let planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+
+        while (planetas.length > 0){
+            let planetaUsuario = prompt("Digite o nome de um planeta:");
+
+            let encontrado = planetas.includes(planetaUsuario);
+
+            
+            if (encontrado) {
+            alert(`Sim, ${planetaUsuario} está na lista de planetas.`);
+            } else {
+            alert(`Não, ${planetaUsuario} não está na lista de planetas.`);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar 4 Atividade 3</title>
+    <script>
+        let frutas = ["Maçã", "Banana", "Laranja", "Uva", "Morango", "Jabuticaba", "Jaca", "Caqui"];
+
+        function exibirListaDeFrutas() {
+        let lista = "Lista de frutas disponíveis:\n";
+        for (let i = 0; i < frutas.length; i++) {
+            lista += `${i + 1}. ${frutas[i]}\n`;
+        }
+        alert(lista);
+        }
+
+        function removerFruta(fruta) {
+        let index = frutas.indexOf(fruta);
+        if (index !== -1) {
+            frutas.splice(index, 1);
+            alert(`${fruta} foi retirada da lista.`);
+        } else {
+            alert("Fruta indisponível no nosso mercado.");
+        }
+        }
+
+        exibirListaDeFrutas();
+
+        while (frutas.length > 0) {
+        let frutaUsuario = prompt("Digite o nome de uma fruta para ser removida:");
+        removerFruta(frutaUsuario);
+        
+        if (frutas.length === 0) {
+            alert("Lista de compras finalizada.");
+        } else {
+            exibirListaDeFrutas();
+        }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
